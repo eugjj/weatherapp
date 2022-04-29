@@ -2,12 +2,12 @@ name: My First Workflow
 on:
   push:
     branches:
-    - 'master'
+    - 'release'
 jobs:
   echo_the_date:
     runs-on: ubuntu-latest
     env:
-      OPENWEATHERMAP_KEY:${{secrets.openweathermap_key}}
+      OPENWEATHERMAP_KEY:${{secrets.OPENWEATHERMAP_API}}
     steps:
     - name: echo the date
       run: echo "The current time and date is $(date)"
@@ -30,3 +30,10 @@ jobs:
       uses: actions/checkout@v3
     - name: run test
       run: mvn clean test
+    - name: deploy to heroku
+      uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+      with:
+        heroku_api_key: ${{secrets.HEROKU_KEY}}
+        heroku_app_name: ${{secrets.HEROKU_APP_NAME}} #Must be unique in Heroku
+        heroku_email: ${{secrets.EMAIL}}
+        branch: ${{github.ref_name}}
