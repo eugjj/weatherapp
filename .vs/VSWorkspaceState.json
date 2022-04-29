@@ -1,0 +1,19 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\dipsa",
+    "\\src\\main\\java\\dipsa\\cicd",
+    "\\src\\main\\java\\dipsa\\cicd\\weather",
+    "\\src\\main\\java\\dipsa\\cicd\\weather\\services",
+    "\\src\\test",
+    "\\src\\test\\java",
+    "\\src\\test\\java\\dipsa",
+    "\\src\\test\\java\\dipsa\\cicd",
+    "\\src\\test\\java\\dipsa\\cicd\\weather"
+  ],
+  "SelectedNode": "\\src\\main\\java\\dipsa\\cicd\\weather\\services\\WeatherService.java",
+  "PreviewInSolutionExplorer": false
+}
