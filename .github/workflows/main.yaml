@@ -4,7 +4,7 @@ on:
     branches:
     - 'master'
 jobs:
-	echo_the_date:
+  echo_the_date:
     runs-on: ubuntu-latest
     steps:
     - name: echo the date
