@@ -22,14 +22,18 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
+    
     - name: setu Maven
       uses: stCarolas/setup-maven@v4.3
       with:
         maven-version: 3.8.2
+    
     - name: checkout the source
       uses: actions/checkout@v3
+    
     - name: run test
       run: mvn clean test
+    
     - name: deploy to heroku
       uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
       with:
