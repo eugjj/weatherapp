@@ -1,6 +1,6 @@
 name: My First Workflow
 on:
-	push:
+  push:
 jobs:
 	echo_the_date:
     runs-on: ubuntu-latest
