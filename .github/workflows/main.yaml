@@ -11,3 +11,20 @@ jobs:
       run: echo "The current time and date is $(date)"
     - name: echo the current branch
       run: echo ${{github.ref_name}}
+  
+  test_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: setup JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: setu Maven
+      uses: stCarolas/setup-maven@v4.3
+      with:
+        maven-version: 3.8.2
+    - name: checkout the source
+      uses: actions/checkout@v3
+    - name: run test
+      run: mvn clean test
