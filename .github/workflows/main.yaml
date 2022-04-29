@@ -7,7 +7,7 @@ jobs:
   echo_the_date:
     runs-on: ubuntu-latest
     env:
-      OPENWEATHERMAP_KEY:${{secrets.OPENWEATHERMAP_API}}
+      OPENWEATHERMAP_KEY:${{secrets.openweathermap_api}}
     steps:
     - name: echo the date
       run: echo "The current time and date is $(date)"
@@ -37,7 +37,7 @@ jobs:
     - name: deploy to heroku
       uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
       with:
-        heroku_api_key: ${{secrets.HEROKU_KEY}}
-        heroku_app_name: ${{secrets.HEROKU_APP_NAME}} #Must be unique in Heroku
-        heroku_email: ${{secrets.EMAIL}}
+        heroku_api_key: ${{secrets.heroku_key}}
+        heroku_app_name: ${{secrets.heroku_app_name}} #Must be unique in Heroku
+        heroku_email: ${{secrets.email}}
         branch: ${{github.ref_name}}
