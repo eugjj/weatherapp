@@ -6,6 +6,8 @@ on:
 jobs:
   echo_the_date:
     runs-on: ubuntu-latest
+    env:
+      OPENWEATHERMAP_KEY:${{secrets.openweathermap_key}}
     steps:
     - name: echo the date
       run: echo "The current time and date is $(date)"
