@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.github",
+    "\\.github\\workflows",
     "\\src",
     "\\src\\main",
     "\\src\\main\\java",
@@ -14,5 +16,6 @@
     "\\src\\test\\java\\dipsa\\cicd",
     "\\src\\test\\java\\dipsa\\cicd\\weather"
   ],
+  "SelectedNode": "\\.github\\workflows\\main.yaml",
   "PreviewInSolutionExplorer": false
 }
